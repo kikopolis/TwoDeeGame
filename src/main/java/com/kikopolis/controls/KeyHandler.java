@@ -14,7 +14,7 @@ public class KeyHandler implements KeyListener {
     @Inject
     public KeyHandler() {}
     
-    public List<Integer> getPressed() {
+    public List<Integer> getPressedKeys() {
         // get a list of all the keys that have true as value
         return List.copyOf(pressed.keySet().stream().filter(pressed::get).toList());
     }

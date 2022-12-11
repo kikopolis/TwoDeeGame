@@ -1,24 +1,15 @@
 package com.kikopolis.tile;
 
-import com.google.inject.Inject;
-
-import java.awt.image.BufferedImage;
+import com.kikopolis.sprite.Sprite;
 
 public class Tile {
     private final String name;
-    private final BufferedImage image;
+    private final Sprite sprite;
     private final boolean solid;
     
-    @Inject
-    public Tile() {
-        name = null;
-        image = null;
-        solid = false;
-    }
-    
-    public Tile(final String name, final BufferedImage image, final boolean solid) {
+    public Tile(final String name, final Sprite sprite, final boolean solid) {
         this.name = name;
-        this.image = image;
+        this.sprite = sprite;
         this.solid = solid;
     }
     
@@ -26,8 +17,8 @@ public class Tile {
         return name;
     }
     
-    public BufferedImage getImage() {
-        return image;
+    public Sprite getSprite() {
+        return sprite;
     }
     
     public boolean isSolid() {
@@ -38,8 +29,8 @@ public class Tile {
     public String toString() {
         return "Tile{" +
                "name='" + name + '\'' +
-               ", image=" + image +
                ", solid=" + solid +
+               ", sprite=" + sprite +
                '}';
     }
 }

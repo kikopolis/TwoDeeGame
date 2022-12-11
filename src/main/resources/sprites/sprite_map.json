@@ -1,0 +1,467 @@
+[
+    {
+        "name": "player_attack_up_1",
+        "id": "76cbdd5f-ad90-4290-931a-d45bec3e5fab",
+        "resourcePath": "/sprites/entities/player/attack/boy_attack_up_1.png"
+    },
+    {
+        "name": "player_attack_up_2",
+        "id": "c426dd8e-4c96-4fff-b16f-238cd28dee4e",
+        "resourcePath": "/sprites/entities/player/attack/boy_attack_up_2.png"
+    },
+    {
+        "name": "player_attack_down_1",
+        "id": "6492f31a-df52-4da3-b2b4-ba944a3de6a2",
+        "resourcePath": "/sprites/entities/player/attack/boy_attack_down_1.png"
+    },
+    {
+        "name": "player_attack_down_2",
+        "id": "18a22288-dcf7-441b-8fa7-341151546461",
+        "resourcePath": "/sprites/entities/player/attack/boy_attack_down_2.png"
+    },
+    {
+        "name": "player_attack_left_1",
+        "id": "91dcc932-fc5a-4e6a-abde-d1e8972f9f83",
+        "resourcePath": "/sprites/entities/player/attack/boy_attack_left_1.png"
+    },
+    {
+        "name": "player_attack_left_2",
+        "id": "fea64412-7415-44e6-8162-08ee0bab5a86",
+        "resourcePath": "/sprites/entities/player/attack/boy_attack_left_2.png"
+    },
+    {
+        "name": "player_attack_right_1",
+        "id": "67c6c5fd-0aa6-47bf-9d7e-791cd1b02919",
+        "resourcePath": "/sprites/entities/player/attack/boy_attack_right_1.png"
+    },
+    {
+        "name": "player_attack_right_2",
+        "id": "32803d48-181e-40a9-9220-ec5aa498b3b7",
+        "resourcePath": "/sprites/entities/player/attack/boy_attack_right_2.png"
+    },
+    {
+        "name": "player_axe_down_1",
+        "id": "3834c0cd-be32-43fe-b829-95be29bf6786",
+        "resourcePath": "/sprites/entities/player/attack/boy_axe_down_1.png"
+    },
+    {
+        "name": "player_axe_down_2",
+        "id": "3f14bf0e-ce98-4199-88d3-4b4402faad67",
+        "resourcePath": "/sprites/entities/player/attack/boy_axe_down_2.png"
+    },
+    {
+        "name": "player_axe_left_1",
+        "id": "3958864e-373a-4cdb-a867-f1c7ec45de2e",
+        "resourcePath": "/sprites/entities/player/attack/boy_axe_left_1.png"
+    },
+    {
+        "name": "player_axe_left_2",
+        "id": "8df7b850-e688-4179-9e5b-bc4f3f07f0a0",
+        "resourcePath": "/sprites/entities/player/attack/boy_axe_left_2.png"
+    },
+    {
+        "name": "player_axe_right_1",
+        "id": "61154102-5847-478a-bf82-70156a1d71d2",
+        "resourcePath": "/sprites/entities/player/attack/boy_axe_right_1.png"
+    },
+    {
+        "name": "player_axe_right_2",
+        "id": "63f1582c-0f79-4d01-a62d-09effc28dcfb",
+        "resourcePath": "/sprites/entities/player/attack/boy_axe_right_2.png"
+    },
+    {
+        "name": "player_axe_up_1",
+        "id": "7d629a7c-7a26-41ef-9a54-8eb7d15ceb9f",
+        "resourcePath": "/sprites/entities/player/attack/boy_axe_up_1.png"
+    },
+    {
+        "name": "player_axe_up_2",
+        "id": "4768d4c8-0d36-44df-a7dc-822ff59d14bf",
+        "resourcePath": "/sprites/entities/player/attack/boy_axe_up_2.png"
+    },
+    {
+        "name": "player_pick_down_1",
+        "id": "962d0596-b8f1-45f8-9601-7fd2449c3a1f",
+        "resourcePath": "/sprites/entities/player/attack/boy_pick_down_1.png"
+    },
+    {
+        "name": "player_pick_down_2",
+        "id": "f3b79010-fb09-44fd-bde8-c11562c291f6",
+        "resourcePath": "/sprites/entities/player/attack/boy_pick_down_2.png"
+    },
+    {
+        "name": "player_pick_left_1",
+        "id": "319246a0-b868-40b9-b023-929b7f91dc7c",
+        "resourcePath": "/sprites/entities/player/attack/boy_pick_left_1.png"
+    },
+    {
+        "name": "player_pick_left_2",
+        "id": "c92e7778-9be0-407b-8327-b6f5bd936346",
+        "resourcePath": "/sprites/entities/player/attack/boy_pick_left_2.png"
+    },
+    {
+        "name": "player_pick_right_1",
+        "id": "25c70327-7b63-45e5-a440-b6c0812beef8",
+        "resourcePath": "/sprites/entities/player/attack/boy_pick_right_1.png"
+    },
+    {
+        "name": "player_pick_right_2",
+        "id": "b7931689-badc-4a82-a9a7-2725110d61ab",
+        "resourcePath": "/sprites/entities/player/attack/boy_pick_right_2.png"
+    },
+    {
+        "name": "player_pick_up_1",
+        "id": "7ec90eb2-8c42-42d5-9f28-6395b568dac5",
+        "resourcePath": "/sprites/entities/player/attack/boy_pick_up_1.png"
+    },
+    {
+        "name": "player_pick_up_2",
+        "id": "b1c473e1-9074-4ef6-9461-dce0882a7984",
+        "resourcePath": "/sprites/entities/player/attack/boy_pick_up_2.png"
+    },
+    {
+        "name": "player_guard_up",
+        "id": "f034f619-c99a-4fb3-83d4-019aea1b5c39",
+        "resourcePath": "/sprites/entities/player/guard/boy_guard_up.png"
+    },
+    {
+        "name": "player_guard_down",
+        "id": "099014fc-cf4d-4d49-aa1d-475340c5e833",
+        "resourcePath": "/sprites/entities/player/guard/boy_guard_down.png"
+    },
+    {
+        "name": "player_guard_right",
+        "id": "ea1b1e90-14d8-480a-b4af-b270c6e81290",
+        "resourcePath": "/sprites/entities/player/guard/boy_guard_right.png"
+    },
+    {
+        "name": "player_guard_left",
+        "id": "79a6e458-2177-455b-bd97-3e7ffe7fd889",
+        "resourcePath": "/sprites/entities/player/guard/boy_guard_left.png"
+    },
+    {
+        "name": "player_down_1",
+        "id": "c51edc75-6b39-44cc-adfa-7584fef98d02",
+        "resourcePath": "/sprites/entities/player/move/boy_down_1.png"
+    },
+    {
+        "name": "player_down_2",
+        "id": "bae8657f-c8d6-495d-8244-0d263f371258",
+        "resourcePath": "/sprites/entities/player/move/boy_down_2.png"
+    },
+    {
+        "name": "player_left_1",
+        "id": "e116075a-28bf-4a9f-9454-8411d88e7f38",
+        "resourcePath": "/sprites/entities/player/move/boy_left_1.png"
+    },
+    {
+        "name": "player_left_2",
+        "id": "2b582c78-ba15-49fa-bc53-f54f1681ea24",
+        "resourcePath": "/sprites/entities/player/move/boy_left_2.png"
+    },
+    {
+        "name": "player_right_1",
+        "id": "225b46ca-abdb-4bfe-80f5-b0a3faa87669",
+        "resourcePath": "/sprites/entities/player/move/boy_right_1.png"
+    },
+    {
+        "name": "player_right_2",
+        "id": "04cba0d7-ceac-42d0-baea-c703777ce0d6",
+        "resourcePath": "/sprites/entities/player/move/boy_right_2.png"
+    },
+    {
+        "name": "player_up_1",
+        "id": "4137f706-8cad-4053-b330-cc7968b483fc",
+        "resourcePath": "/sprites/entities/player/move/boy_up_1.png"
+    },
+    {
+        "name": "player_up_2",
+        "id": "55eb578b-c067-4935-a4db-09de5c618ad8",
+        "resourcePath": "/sprites/entities/player/move/boy_up_2.png"
+    },
+    {
+        "name": "object_axe",
+        "id": "126b459a-da54-40fb-ab49-82b8f2a221e3",
+        "resourcePath": "/sprites/objects/axe.png"
+    },
+    {
+        "name": "object_boots",
+        "id": "71c836f5-17e9-4e63-96a6-021057806358",
+        "resourcePath": "/sprites/objects/boots.png"
+    },
+    {
+        "name": "object_chest",
+        "id": "3a178a6f-cf6d-4fed-b98e-f324682322e7",
+        "resourcePath": "/sprites/objects/chest.png"
+    },
+    {
+        "name": "object_chest_old",
+        "id": "e43a45ea-1e57-48c0-8920-8fb6820410a4",
+        "resourcePath": "/sprites/objects/chest_old.png"
+    },
+    {
+        "name": "object_chest_opened",
+        "id": "090ddff5-e960-4a91-8f20-9b0174d8c7fc",
+        "resourcePath": "/sprites/objects/chest_opened.png"
+    },
+    {
+        "name": "object_coin_bronze",
+        "id": "6895e15a-d620-4cec-9370-e7183714ade1",
+        "resourcePath": "/sprites/objects/coin_bronze.png"
+    },
+    {
+        "name": "object_door",
+        "id": "cbd3a8f2-a9fb-4f00-a31b-3c70b644c2d4",
+        "resourcePath": "/sprites/objects/door.png"
+    },
+    {
+        "name": "object_door_iron",
+        "id": "7c40cf35-12dd-4a60-862c-a6dc08cb470f",
+        "resourcePath": "/sprites/objects/door_iron.png"
+    },
+    {
+        "name": "object_heart_blank",
+        "id": "bc9f7ebd-489b-4405-835b-b09738ea67b5",
+        "resourcePath": "/sprites/objects/heart_blank.png"
+    },
+    {
+        "name": "object_heart_full",
+        "id": "7624358d-4616-47c5-8a36-39b2ee9424c3",
+        "resourcePath": "/sprites/objects/heart_full.png"
+    },
+    {
+        "name": "object_heart_half",
+        "id": "5c387913-9b8b-4134-b8c8-ce4479d509fb",
+        "resourcePath": "/sprites/objects/heart_half.png"
+    },
+    {
+        "name": "object_key",
+        "id": "b8bc40c3-90a9-4a1c-9fb9-301f2839872e",
+        "resourcePath": "/sprites/objects/key.png"
+    },
+    {
+        "name": "object_lantern",
+        "id": "c9c69132-d7b0-4897-89f4-8525c3def8c6",
+        "resourcePath": "/sprites/objects/lantern.png"
+    },
+    {
+        "name": "object_mana_crystal_blank",
+        "id": "539ba0cf-ab17-4d43-a22f-2479d983dc38",
+        "resourcePath": "/sprites/objects/mana_crystal_blank.png"
+    },
+    {
+        "name": "object_mana_crystal_full",
+        "id": "056743db-4da4-4aed-8dfa-978eeff97a73",
+        "resourcePath": "/sprites/objects/mana_crystal_full.png"
+    },
+    {
+        "name": "object_pickaxe",
+        "id": "036485cd-5eb8-41cc-bc4c-dc795ffe2d07",
+        "resourcePath": "/sprites/objects/pickaxe.png"
+    },
+    {
+        "name": "object_potion_red",
+        "id": "5582c41e-7ead-406c-8c4f-a7c309497638",
+        "resourcePath": "/sprites/objects/potion_red.png"
+    },
+    {
+        "name": "object_shield_blue",
+        "id": "bff3f028-dfa2-46f5-b275-efa24e26a191",
+        "resourcePath": "/sprites/objects/shield_blue.png"
+    },
+    {
+        "name": "object_shield_wood",
+        "id": "667ef513-50b2-4208-af06-aea93857a315",
+        "resourcePath": "/sprites/objects/shield_wood.png"
+    },
+    {
+        "name": "object_sword_normal",
+        "id": "6b23ed87-9abc-47ac-adbd-54637be955f5",
+        "resourcePath": "/sprites/objects/sword_normal.png"
+    },
+    {
+        "name": "object_tent",
+        "id": "9aefbb4d-ac1a-46f9-b970-ac638054725c",
+        "resourcePath": "/sprites/objects/tent.png"
+    },
+    {
+        "name": "tile_hut",
+        "id": "e832fb4d-4529-44b2-a7d1-3918569f68cc",
+        "resourcePath": "/sprites/tiles/collision_tiles/hut.png"
+    },
+    {
+        "name": "tile_table01",
+        "id": "0c7bd54a-358e-417f-94c1-83d3349b0a34",
+        "resourcePath": "/sprites/tiles/collision_tiles/table01.png"
+    },
+    {
+        "name": "tile_tree",
+        "id": "d01c2862-6d20-4429-af6a-108c1e90952d",
+        "resourcePath": "/sprites/tiles/collision_tiles/tree.png"
+    },
+    {
+        "name": "tile_wall",
+        "id": "71759ad4-46ca-4534-a191-1d6a4bb26ac4",
+        "resourcePath": "/sprites/tiles/collision_tiles/wall.png"
+    },
+    {
+        "name": "tile_water00",
+        "id": "e3d7fecb-1677-4c5a-8bb9-478b321679e6",
+        "resourcePath": "/sprites/tiles/collision_tiles/water00.png"
+    },
+    {
+        "name": "tile_water01",
+        "id": "be2ee483-e32a-4048-a880-148e070aeca7",
+        "resourcePath": "/sprites/tiles/collision_tiles/water01.png"
+    },
+    {
+        "name": "tile_water02",
+        "id": "a4164fbb-fe38-4ab8-8b9d-79e6f8c8f647",
+        "resourcePath": "/sprites/tiles/collision_tiles/water02.png"
+    },
+    {
+        "name": "tile_water03",
+        "id": "88b77695-882f-42cb-aafb-e5efb8a6cc79",
+        "resourcePath": "/sprites/tiles/collision_tiles/water03.png"
+    },
+    {
+        "name": "tile_water04",
+        "id": "81de777b-0970-458d-89c4-6580636df906",
+        "resourcePath": "/sprites/tiles/collision_tiles/water04.png"
+    },
+    {
+        "name": "tile_water05",
+        "id": "71aa92f4-bbc1-4e98-8829-a605de275d5d",
+        "resourcePath": "/sprites/tiles/collision_tiles/water05.png"
+    },
+    {
+        "name": "tile_water06",
+        "id": "c17bd7df-7796-4206-8f15-a5eaac1633f6",
+        "resourcePath": "/sprites/tiles/collision_tiles/water06.png"
+    },
+    {
+        "name": "tile_water07",
+        "id": "cb2c4f04-9581-4063-bec3-de3352c50c34",
+        "resourcePath": "/sprites/tiles/collision_tiles/water07.png"
+    },
+    {
+        "name": "tile_water08",
+        "id": "a7068e36-4f26-4f8d-b5eb-e1db63bb59c5",
+        "resourcePath": "/sprites/tiles/collision_tiles/water08.png"
+    },
+    {
+        "name": "tile_water09",
+        "id": "6f4ff170-4b0e-427a-b3b2-ead32354b792",
+        "resourcePath": "/sprites/tiles/collision_tiles/water09.png"
+    },
+    {
+        "name": "tile_water10",
+        "id": "2154cf20-0783-478f-82ee-20c0d9e85d83",
+        "resourcePath": "/sprites/tiles/collision_tiles/water10.png"
+    },
+    {
+        "name": "tile_water11",
+        "id": "c5c9d3fd-3aac-459b-827c-7e23c014ecf4",
+        "resourcePath": "/sprites/tiles/collision_tiles/water11.png"
+    },
+    {
+        "name": "tile_water12",
+        "id": "098e2523-15d4-41a2-a155-81a17aa83bdd",
+        "resourcePath": "/sprites/tiles/collision_tiles/water12.png"
+    },
+    {
+        "name": "tile_water13",
+        "id": "db7cda74-aa7d-43c5-b45b-f8115fd75947",
+        "resourcePath": "/sprites/tiles/collision_tiles/water13.png"
+    },
+    {
+        "name": "tile_earth",
+        "id": "94303bdf-cf2f-465f-80d1-8078bcd76fe6",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/earth.png"
+    },
+    {
+        "name": "tile_floor01",
+        "id": "e46607cf-5ba9-4128-b26b-ca61944281d3",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/floor01.png"
+    },
+    {
+        "name": "tile_grass00",
+        "id": "e333b1ee-46b8-4453-b7b6-4fa9bd298271",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/grass00.png"
+    },
+    {
+        "name": "tile_grass01",
+        "id": "899101bd-ff5d-4034-8727-cd441245ce9b",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/grass01.png"
+    },
+    {
+        "name": "tile_road00",
+        "id": "f9e5dea7-70f5-4f0e-85bc-68418501f737",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/road00.png"
+    },
+    {
+        "name": "tile_road01",
+        "id": "cca17cd8-058e-4779-ab29-961a58bf8a72",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/road01.png"
+    },
+    {
+        "name": "tile_road02",
+        "id": "af19abb8-8a16-4bec-bb4f-08c808946e7f",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/road02.png"
+    },
+    {
+        "name": "tile_road03",
+        "id": "ff9bd555-0897-4d0a-bcf1-70db6ff1aac5",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/road03.png"
+    },
+    {
+        "name": "tile_road04",
+        "id": "b776fa7d-fcdc-490c-a6d0-8038bc6a0bee",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/road04.png"
+    },
+    {
+        "name": "tile_road05",
+        "id": "ecb16cb5-5fdc-466e-904e-40948d3a30ba",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/road05.png"
+    },
+    {
+        "name": "tile_road06",
+        "id": "e9ea15e8-8fb5-4a6e-aaca-f729e7eab754",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/road06.png"
+    },
+    {
+        "name": "tile_road07",
+        "id": "29b54195-b963-47c6-9917-5370a5585b67",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/road07.png"
+    },
+    {
+        "name": "tile_road08",
+        "id": "65d055dd-5f46-4fe4-85b8-1489582d975b",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/road08.png"
+    },
+    {
+        "name": "tile_road09",
+        "id": "12bbe77a-3d9f-4b1f-ab7d-681050473621",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/road09.png"
+    },
+    {
+        "name": "tile_road10",
+        "id": "13d2a782-7646-43dc-a002-0059fbbb2c93",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/road10.png"
+    },
+    {
+        "name": "tile_road11",
+        "id": "767d7020-112d-48ca-a2b6-03502b6c6e36",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/road11.png"
+    },
+    {
+        "name": "tile_road12",
+        "id": "67981e75-9aed-437b-a607-90137d69d45a",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/road12.png"
+    },
+    {
+        "name": "tile_sand",
+        "id": "e2dee5fc-908e-4910-94e6-3f1324f8fe06",
+        "resourcePath": "/sprites/tiles/non_collision_tiles/sand.png"
+    }
+]
