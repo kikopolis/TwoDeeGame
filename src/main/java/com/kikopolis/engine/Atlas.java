@@ -1,13 +1,13 @@
 package com.kikopolis.engine;
 
 import com.google.inject.Inject;
-import com.kikopolis.GamePanel;
 import com.kikopolis.controls.FacingDirection;
 import com.kikopolis.controls.KeyHandler;
 import com.kikopolis.controls.KeyboardControlsList;
 import com.kikopolis.entity.Player;
 import com.kikopolis.map.AbstractMap;
 import com.kikopolis.map.MapManager;
+import com.kikopolis.tile.Tile;
 import org.slf4j.Logger;
 
 import javax.swing.JFrame;
@@ -17,8 +17,11 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.util.List;
+import java.util.Map;
 
 import static com.kikopolis.config.SpriteConfig.TILE_SIZE;
 import static com.kikopolis.config.WindowConfig.GAME_SCREEN_HEIGHT;
@@ -34,14 +37,13 @@ public final class Atlas extends JPanel implements Runnable {
     // todo this needs a collison/physics engine
     // todo this needs a renderer to render 2d graphics
     private static final Logger LOGGER = getLogger(Atlas.class);
-    private final JFrame window;
-    private final AssetManager assetManager;
-    private final Physics physics;
-    private final KeyHandler keyHandler;
-    private final MapManager mapManager;
-    private AbstractMap currentMap;
-    private int currentMapIndex;
-    private Thread gameThread;
+    private final transient AssetManager assetManager;
+    private final transient Physics physics;
+    private final transient KeyHandler keyHandler;
+    private final transient MapManager mapManager;
+    private transient AbstractMap currentMap;
+    private transient int currentMapIndex;
+    private transient Thread gameThread;
     
     @Inject
     public Atlas(
@@ -61,16 +63,19 @@ public final class Atlas extends JPanel implements Runnable {
         this.assetManager.loadSprites();
         // then load entities
         this.assetManager.loadEntities();
+        // then load objects
+        this.assetManager.loadObjects();
         // then load tiles
         this.assetManager.loadTiles();
         // then load maps
         this.mapManager.loadMaps();
         
         // set the map
-        this.currentMap = this.mapManager.getMap(this.mapManager.getMapProgression()[currentMapIndex]);
+//        this.currentMap = this.mapManager.getMap(this.mapManager.getMapProgression()[currentMapIndex]);
+        this.currentMap = this.mapManager.getMap("test");
         
         // create the game window and the panel inside it
-        window = new JFrame();
+        JFrame window = new JFrame();
         window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         window.setResizable(false);
         window.setTitle("Kikopolis TwoDee Adventure");
@@ -134,6 +139,7 @@ public final class Atlas extends JPanel implements Runnable {
         // calculate movement
         movePlayer(this.keyHandler.getPressedKeys());
         // calculate collisions
+        checkCollision();
         // calculate physics
     }
     
@@ -209,8 +215,8 @@ public final class Atlas extends JPanel implements Runnable {
                             sprite.getImage(),
                             screenX,
                             screenY,
-                            GamePanel.TILE_SIZE,
-                            GamePanel.TILE_SIZE,
+                            TILE_SIZE,
+                            TILE_SIZE,
                             null
                                       );
                 }
@@ -221,5 +227,104 @@ public final class Atlas extends JPanel implements Runnable {
                 worldRow++;
             }
         }
+    }
+    
+    private void checkCollision() {
+        checkPlayerCollision();
+    }
+    
+    private void checkPlayerCollision() {
+        final var player = (Player) this.assetManager.getEntityByName(Player.NAME_ID);
+        var playerWorldLeftX = player.getWorldX() + player.getHitBox().x;
+        var playerWorldRightX = playerWorldLeftX + player.getHitBox().width;
+        var playerWorldTopY = player.getWorldY() + player.getHitBox().y;
+        var playerWorldBottomY = playerWorldTopY + player.getHitBox().height;
+        var playerLeftColumn = playerWorldLeftX / TILE_SIZE;
+        var playerRightColumn = playerWorldRightX / TILE_SIZE;
+        var playerTopRow = playerWorldTopY / TILE_SIZE;
+        var playerBottomRow = playerWorldBottomY / TILE_SIZE;
+        // to facilitate diagonal collision, we will drop the facing direction and instead check all 4 directions
+        Tile tileUpLeft = assetManager.getTile(
+                currentMap.getTileName(playerTopRow, playerLeftColumn));
+        Tile tileUpRight = assetManager.getTile(
+                currentMap.getTileName(playerTopRow, playerRightColumn));
+        Tile tileDiagonalUpLeft = assetManager.getTile(
+                currentMap.getTileName(playerTopRow, playerLeftColumn - 1));
+        Tile tileDiagonalUpRight = assetManager.getTile(
+                currentMap.getTileName(playerTopRow, playerRightColumn + 1));
+        Tile tileDownLeft = assetManager.getTile(
+                currentMap.getTileName(playerBottomRow, playerLeftColumn));
+        Tile tileDownRight = assetManager.getTile(
+                currentMap.getTileName(playerBottomRow, playerRightColumn));
+        Tile tileDiagonalDownLeft = assetManager.getTile(
+                currentMap.getTileName(playerBottomRow, playerLeftColumn - 1));
+        Tile tileDiagonalDownRight = assetManager.getTile(
+                currentMap.getTileName(playerBottomRow, playerRightColumn + 1));
+        Tile tileLeftUpper = assetManager.getTile(
+                currentMap.getTileName(playerTopRow, playerLeftColumn));
+        Tile tileLeftLower = assetManager.getTile(
+                currentMap.getTileName(playerBottomRow, playerLeftColumn));
+        Tile tileRightUpper = assetManager.getTile(
+                currentMap.getTileName(playerTopRow, playerRightColumn));
+        Tile tileRightLower = assetManager.getTile(
+                currentMap.getTileName(playerBottomRow, playerRightColumn));
+    
+        if (isPlayerCollidingWithLeftMapEdge(player)) {
+            player.setWorldX(-player.getHitBox().x);
+        }
+        if (isPlayerCollidingWithRightMapEdge(player)) {
+            player.setWorldX(currentMap.getColumns() * TILE_SIZE - player.getHitBox().x - player.getHitBox().width);
+        }
+        if (isPlayerCollidingWithTopMapEdge(player)) {
+            player.setWorldY(-player.getHitBox().y);
+        }
+        if (isPlayerCollidingWithBottomMapEdge(player)) {
+            player.setWorldY(currentMap.getRows() * TILE_SIZE - player.getHitBox().y - player.getHitBox().height);
+        }
+        
+        if (player.getHitBox().intersects(tileUpLeft.getHitBox())
+            || player.getHitBox().intersects(tileUpRight.getHitBox())) {
+            player.setWorldY(player.getWorldY() + player.getSpeed());
+        }
+        if (player.getHitBox().intersects(tileDownLeft.getHitBox())
+            || player.getHitBox().intersects(tileDownRight.getHitBox())) {
+            player.setWorldY(player.getWorldY() - player.getSpeed());
+        }
+        if (player.getHitBox().intersects(tileLeftUpper.getHitBox())
+            || player.getHitBox().intersects(tileLeftLower.getHitBox())) {
+            player.setWorldX(player.getWorldX() + player.getSpeed());
+        }
+        if (player.getHitBox().intersects(tileRightUpper.getHitBox())
+            || player.getHitBox().intersects(tileRightLower.getHitBox())) {
+            player.setWorldX(player.getWorldX() - player.getSpeed());
+        }
+        if (player.getHitBox().intersects(tileDiagonalUpLeft.getHitBox())
+            || player.getHitBox().intersects(tileDiagonalUpRight.getHitBox())) {
+            player.setWorldY(player.getWorldY() + player.getSpeed());
+            player.setWorldX(player.getWorldX() + player.getSpeed());
+        }
+        if (player.getHitBox().intersects(tileDiagonalDownLeft.getHitBox())
+            || player.getHitBox().intersects(tileDiagonalDownRight.getHitBox())) {
+            player.setWorldY(player.getWorldY() - player.getSpeed());
+            player.setWorldX(player.getWorldX() - player.getSpeed());
+        }
+    }
+    
+    private boolean isPlayerCollidingWithLeftMapEdge(final Player player) {
+        return player.getWorldX() + player.getHitBox().x < 0;
+    }
+    
+    private boolean isPlayerCollidingWithRightMapEdge(final Player player) {
+        return player.getWorldX() + player.getHitBox().x + player.getHitBox().width
+               > currentMap.getColumns() * TILE_SIZE;
+    }
+    
+    private boolean isPlayerCollidingWithTopMapEdge(final Player player) {
+        return player.getWorldY() + player.getHitBox().y < 0;
+    }
+    
+    private boolean isPlayerCollidingWithBottomMapEdge(final Player player) {
+        return player.getWorldY() + player.getHitBox().y + player.getHitBox().height
+               > currentMap.getRows() * TILE_SIZE;
     }
 }

@@ -6,6 +6,7 @@ import com.kikopolis.config.SpriteConfig;
 import com.kikopolis.entity.AbstractEntity;
 import com.kikopolis.entity.Player;
 import com.kikopolis.object.AbstractObject;
+import com.kikopolis.object.OBJ_Key;
 import com.kikopolis.sprite.Sprite;
 import com.kikopolis.tile.Tile;
 import com.kikopolis.tile.TileSpriteList;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
@@ -78,19 +80,25 @@ public class Bertram implements AssetManager {
     }
     
     public AbstractEntity getEntityByName(final String name) {
-        return entities.stream().filter(entity -> entity.getName().equals(name)).findFirst().orElse(null);
+        return entities.stream().filter(e -> e.getName().equals(name)).findFirst().orElse(null);
     }
     
     public void loadObjects() {
-        // todo load objects
+        var key = new OBJ_Key();
+        key.setSprite(getSpriteByName(OBJ_Key.NAME_ID));
+        objects.add(key);
     }
     
     public AbstractObject getObjectByName(final String name) {
-        return null;
+        return objects.stream().filter(o -> o.getName().equals(name)).findFirst().orElse(null);
     }
     
     public Tile getTile(final String name) {
-        return tiles.stream().filter(tile -> tile.getName().equals(name)).findFirst().orElse(null);
+        var tile = tiles.stream().filter(t -> t.getName().equals(name)).findFirst().orElse(null);
+        if (tile == null) {
+            tile = new Tile(name, null, true);
+        }
+        return tile;
     }
     
     public void loadTiles() {

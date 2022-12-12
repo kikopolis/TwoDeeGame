@@ -54,4 +54,11 @@ public abstract class AbstractMap {
     public String[][] getTileData() {
         return tileData;
     }
+    
+    public String getTileName (final int row, final int column) {
+        if (row < 0 || row >= rows || column < 0 || column >= columns) {
+            return null;
+        }
+        return tileData[row][column];
+    }
 }

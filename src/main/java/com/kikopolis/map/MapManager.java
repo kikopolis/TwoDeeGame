@@ -48,11 +48,13 @@ public class MapManager {
     }
     
     public void loadMaps() {
-        var list = new AbstractMap[2];
+        var list = new AbstractMap[3];
+        var test = new TestMap();
+        list[0] = test;
         var forest01 = new Forest01(loadTileData("Forest01"));
-        list[0] = forest01;
+        list[1] = forest01;
         var forest02 = new Forest01(loadTileData("Forest02"));
-        list[1] = forest02;
+        list[2] = forest02;
         maps = list;
     }
     
